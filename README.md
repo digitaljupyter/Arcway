@@ -53,10 +53,10 @@ import arcway;
 import std.stdio;
 
 void main() {
-  auto arcway = arcway\_init();
+  auto arcway = arcway_init();
 
-  arc\_to\_top(arcway, "a: 1");
+  arc_to_top(arcway, "a: 1");
 
-  writeln(aw\_get\_value(arcway, "a")); // int(1)
+  writeln(aw_get_value(arcway, "a")); // int(1)
 }
 ```
