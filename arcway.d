@@ -99,7 +99,9 @@ void arc_to_top(Arcway_State x,
         }
         break;
       default:
-        b~=lf;break; /* add character to buffer */
+        if (s != 7) /* not comment */
+          b~=lf;
+        break; /* add character to buffer */
 
     }
   }
@@ -107,3 +109,15 @@ void arc_to_top(Arcway_State x,
     x.k[n] = resolve_Type(strip(b));
   }
 }
+
+// For testing
+
+/*
+  void main() {
+    auto s = new Arcway_State();
+
+    arc_to_top(s, readText("test.arc"));
+
+    writeln(aw_get_value(s, "a")[1]);
+  }
+*/
